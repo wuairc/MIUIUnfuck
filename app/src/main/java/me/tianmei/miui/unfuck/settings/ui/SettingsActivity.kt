@@ -1,0 +1,27 @@
+package me.tianmei.miui.unfuck.settings.ui
+
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.preference.PreferenceFragmentCompat
+import me.tianmei.miui.unfuck.R
+import me.tianmei.miui.unfuck.settings.UserPreferences
+
+class SettingsActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.settings_activity)
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.settings, SettingsFragment())
+            .commit()
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    class SettingsFragment : PreferenceFragmentCompat() {
+        override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+            preferenceManager.sharedPreferencesName = UserPreferences.PREFERENCE_NAME
+            setPreferencesFromResource(R.xml.root_preferences, rootKey)
+        }
+    }
+}

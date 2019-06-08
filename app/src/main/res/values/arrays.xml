@@ -1,0 +1,25 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+
+    <!--    Search Engines -->
+    <string-array name="preference_search_engine_entries">
+        <item>ACTION_WEB_SEARCH</item>
+        <item>Google.com</item>
+        <item>Bing.com</item>
+        <item>Baidu.com</item>
+    </string-array>
+    <string-array name="preference_search_engine_values">
+        <item>web_search</item>
+        <item>google.com</item>
+        <item>bing.com</item>
+        <item>baidu.com</item>
+    </string-array>
+</resources>
