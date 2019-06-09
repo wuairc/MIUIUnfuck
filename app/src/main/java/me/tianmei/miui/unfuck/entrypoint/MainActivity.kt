@@ -12,5 +12,6 @@ class MainActivity : AppCompatActivity() {
 //        setContentView(R.layout.activity_main)
 
         startActivity(Intent(this, SettingsActivity::class.java))
+        finish()
     }
 }
